@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'counter.dart';
 
-// Change this to your name.
-const String appAuthor = 'gitkenny-hi';
+const String appAuthor = 'kennynguyen216';
 
 void main() {
   runApp(const MyApp());
