@@ -10,7 +10,8 @@ Future<void> pause(WidgetTester tester) =>
 void main() {
   testWidgets('Pressing "-" three times makes the counter -3', (tester) async {
     await tester.pumpWidget(const MyApp());
-    await pause(tester);
+    // Give the app window a few seconds to appear before tapping.
+    await tester.runAsync(() => Future.delayed(const Duration(seconds: 3)));
 
     // Name is in the UI and counter starts at 0.
     expect(find.text("$appAuthor's Counter App"), findsOneWidget);

@@ -25,8 +25,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   project.set_dart_entrypoint_arguments(std::move(command_line_arguments));
 
   FlutterWindow window(project);
-  Win32Window::Point origin(10, 10);
-  Win32Window::Size size(1280, 720);
+  // Small window on the right so the code and terminal stay visible.
+  Win32Window::Point origin(840, 40);
+  Win32Window::Size size(420, 600);
   if (!window.Create(L"counter_app", origin, size)) {
     return EXIT_FAILURE;
   }
